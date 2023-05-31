@@ -1,10 +1,10 @@
-let currentPageUrl = 'https://swapi.dev/api/people/'
+let currentPageUrl = 'https://swapi.dev/api/planets/'
 
 
 window.onload = async ()=>{
     try{
        
-       await loadCharacters(currentPageUrl)
+       await loadPlanets(currentPageUrl)
 
     }   catch (error) {
 
@@ -20,7 +20,7 @@ window.onload = async ()=>{
 
 }
 
-async function loadCharacters(url){
+async function loadPlanets(url){
 
     const mainContent = document.getElementById('main-content')
     mainContent.innerHTML = ''; 
@@ -28,22 +28,22 @@ async function loadCharacters(url){
             const response = await fetch(url);
             const responseJson = await response.json();
 
-            responseJson.results.forEach((character) => {
+            responseJson.results.forEach((planet) => {
                 const card = document.createElement("div")
                 card.style.backgroundImage = 
-                `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
+                `url('https://starwars-visualguide.com/assets/img/planets/${planet.url.replace(/\D/g, "")}.jpg')`
                 card.className = "cards"
 
-                const characterNameBG = document.createElement("div")
-                characterNameBG.className = "planet-name"
+                const planetNameBG = document.createElement("div")
+                planetNameBG.className = "planets-bg"
 
-                const characterName = document.createElement("span")
-                characterName.className = "character-name"
-                characterName.innerText = `${character.name}`
+                const planetName = document.createElement("span")
+                planetName.className = "planets-name"
+                planetName.innerText = `${planet.name}`
 
 
-                characterNameBG.appendChild(characterName)
-                card.appendChild(characterNameBG)
+                planetNameBG.appendChild(planetName)
+                card.appendChild(planetNameBG)
 
                 card.onclick = () =>{
                     const modal= document.getElementById("modal");
@@ -59,40 +59,40 @@ async function loadCharacters(url){
                     fecharModal.className= "fechar-modal"
                     fecharModal.innerHTML= '<i class="fa-solid fa-xmark"></i>'
 
-                    const characterImage = document.createElement("div")
-                    characterImage.style.backgroundImage = `url('https://starwars-visualguide.com/assets/img/characters/${character.url.replace(/\D/g, "")}.jpg')`
-                    characterImage.className = "character-image"
+                    const planetImage = document.createElement("div")
+                    planetImage.style.backgroundImage = `url('https://starwars-visualguide.com/assets/img/planets/${planet.url.replace(/\D/g, "")}.jpg')`
+                    planetImage.className = "planet-image"
 
 
-                    const characterName = document.createElement("span")
-                    characterName.className = "character-details"
-                    characterName.innerText = ` Nome: ${character.name}`
+                    const planetName = document.createElement("span")
+                    planetName.className = "planet-details"
+                    planetName.innerText = ` Nome: ${planet.name}`
 
-                    const characterHeight = document.createElement("span")
-                    characterHeight.className = "character-details"
-                    characterHeight.innerText = `Altura: ${convertHeight(character.height)} mts`
+                    const rotacaoPlanet = document.createElement("span")
+                    rotacaoPlanet.className = "planet-details"
+                    rotacaoPlanet.innerText = `Periodo de rotacao: ${planet.rotation_period} hrs`
 
-                    const mass = document.createElement("span")
-                    mass.className = "character-details"
-                    mass.innerText = ` Peso: ${convertMass(character.mass)} KG `
+                    const diasPlanet = document.createElement("span")
+                    diasPlanet.className = "planet-details"
+                    diasPlanet.innerText = `Dias no ano: ${planet.orbital_period} dias`
 
                      
-                    const eyeColor = document.createElement("spam")
-                    eyeColor.className = "character-details"
-                    eyeColor.innerText = ` Cor Dos olhos: ${convertEyeColor(character.eye_color)} `
+                    const climaPlanet = document.createElement("spam")
+                    climaPlanet.className = "planet-details"
+                    climaPlanet.innerText = `Clima: ${planet.climate}`
 
-                    const birthYear = document.createElement("span")
-                    birthYear.className = "character-details"
-                    birthYear.innerText = `Nascimento: ${convertBirthYear(character.birth_year)} `
+                    const population= document.createElement("span")
+                    population.className = "planet-details"
+                    population.innerText = `Populacao: ${planet.population}`
                
                   
                     modalContent.appendChild(fecharModal)
-                    modalContent.appendChild(characterImage)
-                    modalContent.appendChild(characterName)
-                    modalContent.appendChild(characterHeight)
-                    modalContent.appendChild(mass)
-                    modalContent.appendChild(eyeColor)
-                    modalContent.appendChild(birthYear)
+                    modalContent.appendChild(planetImage)
+                    modalContent.appendChild(planetName)
+                    modalContent.appendChild(rotacaoPlanet)
+                    modalContent.appendChild(diasPlanet)
+                    modalContent.appendChild(climaPlanet)
+                    modalContent.appendChild(population)
                    
                 }
 
@@ -131,7 +131,7 @@ async function loadNextPage(){
     const response = await fetch(currentPageUrl)
     const responseJson = await response.json()
 
-    await loadCharacters(responseJson.next)
+    await loadPlanets(responseJson.next)
 
 
     } catch (error) {
@@ -150,7 +150,7 @@ async function loadPreviousPage(){
     const response = await fetch(currentPageUrl)
     const responseJson = await response.json()
 
-    await loadCharacters(responseJson.previous)
+    await loadPlanets(responseJson.previous)
 
     } catch (error) {
 
@@ -226,3 +226,4 @@ function convertBirthYear (birthYear){
     return `${birthYear}` 
 
 }
+
