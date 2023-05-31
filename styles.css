@@ -32,7 +32,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
-    justify-content: ;
+    justify-content:center ;
 }
 
 
@@ -967,11 +967,7 @@ footer{
 
         }
 
-        .img-logo{
-            
-
-
-        }
+     
 
         .icons{
             margin-left: 20%;
