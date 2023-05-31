@@ -20,9 +20,11 @@ body{
 }
 
 header{
-    width: 100%;
+  width: 100%;
     
-   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
     align-items: center;
     
 }
@@ -30,15 +32,18 @@ header{
 .logo{
     display: flex;
     align-items: center;
-
+    justify-content: ;
 }
+
+
+
 
 
 
 header img{
     cursor: pointer;
     transition: 1s;
-    margin: 0 auto;
+
 }
 
 header img:hover{
@@ -48,15 +53,8 @@ header img:hover{
 }
 
 
-header span{
-
-       margin-right: 40%;
-        cursor: pointer;
-        transition: 1s;
-        
 
 
-}
 
 header span:hover{
     transform: scale(1.1);
@@ -66,24 +64,74 @@ header span:hover{
 }
 
 .pagina-extra{
-        margin-left: 10%;
-        display: flex;
         
-
+    float: left;
+        
+        width: 600px;
+       
+    justify-content: space-around;
+    margin-bottom: 40px;
 
 }
 
+ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+li{
+    list-style-type: none;
+    float: left;
+   
+}
+
 .pagina-extra a{
-    padding-left: 300px;
+  
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-decoration: none;
     font-size: 26px;
     text-shadow:1px 1px 30px #fff;
+    
 }
 
 .pagina-extra a:hover{
     font-size: 27px;
 
+}
+
+
+ 
+.icons{
+  
+ 
+   display: flex;
+   align-items: end;
+}
+
+
+
+
+
+
+.img-logo{
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+.fa-brands{  
+    width: 60PX;
+    height: 50;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.fa-brands:hover{
+    color: gold;
+    transform:scales(1.1)
+    
 }
 
 
@@ -104,43 +152,7 @@ header span:hover{
 
 }
 
-.icons{
-  
-   margin-left: 44%;
-   display: flex;
-   align-items: end;
-}
 
-#logo span{
-
-        
-        align-items: center;
-        
-
-}
-
-
-
-
-.img-logo{
-    width: 500px;
-    margin-left: 33%;
-
-}
-
-.fa-brands{  
-    width: 60PX;
-    height: 50;
-    cursor: pointer;
-    margin-top: 20px;
-
-}
-
-.fa-brands:hover{
-    color: gold;
-    transform:scales(1.1)
-    
-}
 
 .main-container{
 
@@ -507,7 +519,7 @@ footer{
         }
 
         .img-logo{
-            margin-left: 35%;
+           margin: 0 auto;
             width: 400px;
             
 
@@ -545,7 +557,7 @@ footer{
         }
 
         .img-logo{
-            margin-left: 35%;
+            margin:0 auto;
             width: 400px;
             
 
@@ -583,7 +595,7 @@ footer{
         }
 
         .img-logo{
-            margin-left: 30%;
+            margin: 0 auto;
             width: 400px;
             
 
@@ -628,7 +640,7 @@ footer{
         }
 
         .img-logo{
-            margin-left: 28%;
+           margin: 0 auto;
             width: 400px;
             
 
@@ -657,12 +669,7 @@ footer{
 
         }
 
-        .icons{
-  
-            margin-left: 40%;
-            display: flex;
-            align-items: end;
-         }
+       
 
     }
 
@@ -674,11 +681,13 @@ footer{
             }
 
             .img-logo{
-                margin-left: 25%;
+                margin: 0 auto;
                 width: 400px;
                 
     
             }
+
+
 
      }
 
@@ -713,16 +722,50 @@ footer{
             }
 
             .img-logo{
-                margin-left: 18%;
+                margin:0 auto;
 
 
             }
 
-            .icons{
-                margin-left: 35%;
-
-
+            
+            .pagina-extra{
+        
+                float: left;
+                    
+                    width: 400px;
+                   
+                justify-content: space-around;
+                margin-bottom: 40px;
+               
+            
             }
+            
+            ul{
+                display: flex;
+                justify-content: space-between;
+            
+            }
+            
+            li{
+                list-style-type: none;
+                float: left;
+               
+            }
+            
+            .pagina-extra a{
+              
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                text-decoration: none;
+                font-size: 26px;
+                text-shadow:1px 1px 30px #fff;
+                
+            }
+        
+            .construcao span{
+                font-size: 16px;
+        
+            }
+        
 
      }
 
@@ -744,13 +787,7 @@ footer{
         }
 
         .img-logo{
-            margin-left: 10%;
-
-
-        }
-
-        .icons{
-            margin-left: 30%;
+            margin: 0 auto;
 
 
         }
@@ -775,16 +812,11 @@ footer{
         }
 
         .img-logo{
-            margin-left: 5%;
+            margin:0 auto;
 
 
         }
 
-        .icons{
-            margin-left: 27%;
-
-
-        }
 
         .character-name{
             font-size: 18px;
@@ -818,6 +850,45 @@ footer{
 
         }
 
+        .pagina-extra{
+        
+            float: left;
+                
+                width: 350px;
+               
+            justify-content: space-around;
+            margin-bottom: 40px;
+           
+        
+        }
+        
+        ul{
+            display: flex;
+            justify-content: space-between;
+        
+        }
+        
+        li{
+            list-style-type: none;
+            float: left;
+           
+        }
+        
+        .pagina-extra a{
+          
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-decoration: none;
+            font-size: 26px;
+            text-shadow:1px 1px 30px #fff;
+            
+        }
+    
+        .construcao span{
+            font-size: 16px;
+    
+        }
+    
+
      }
 
      @media(max-width: 414px){
@@ -839,7 +910,7 @@ footer{
 
         .img-logo{
             width: 300px;
-            margin-left: 45px;
+           
 
         }
 
@@ -897,7 +968,7 @@ footer{
         }
 
         .img-logo{
-            margin-left: 5%;
+            
 
 
         }
@@ -935,6 +1006,8 @@ footer{
             font-size: 13px;
 
         }
+
+
 
      }
 
@@ -996,3 +1069,5 @@ footer{
         }
 
      }
+
+     

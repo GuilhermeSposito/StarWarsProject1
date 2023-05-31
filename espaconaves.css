@@ -1,0 +1,303 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+*{
+    
+    color: white;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: star wars , sans-serif;
+    margin: 0;
+    padding: 0;
+ 
+}
+
+body{
+    
+
+    background-image: url('universo-bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+
+}
+
+header{
+  width: 100%;
+    
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin:0 auto;
+    width: 100%;
+
+    
+
+}
+
+
+
+
+
+header img{
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+header img:hover{
+
+    transform: scale(1.01);
+
+}
+
+
+
+
+
+header span:hover{
+    transform: scale(1.1);
+    color: gold;
+
+
+}
+
+.pagina-extra{
+        
+    float: left;
+        
+        width: 600px;
+       
+    justify-content: space-around;
+    margin-bottom: 40px;
+
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+li{
+    list-style-type: none;
+    float: left;
+   
+}
+
+.pagina-extra a{
+  
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    font-size: 26px;
+    text-shadow:1px 1px 30px #fff;
+    
+}
+
+.pagina-extra a:hover{
+    font-size: 27px;
+
+}
+
+
+.fechar-modal{
+  position:relative;
+    left: 45%;
+   
+   cursor: pointer;
+
+   
+
+}
+
+.fechar-modal:hover{
+
+    transform: scale(1.2);
+
+
+}
+
+.icons{
+  
+ 
+   display: flex;
+   align-items: end;
+}
+
+#logo span{
+
+        
+        align-items: center;
+        
+
+}
+
+
+
+
+.img-logo{
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+.fa-brands{  
+    width: 60PX;
+    height: 50;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.fa-brands:hover{
+    color: gold;
+    transform:scales(1.1)
+    
+}
+
+
+
+/* 
+parte a ser excluida depois de pronto */
+
+.construcao{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+       
+        align-items: center;
+
+        margin-top: 32px;
+        margin: 0;
+
+        padding: 0;
+
+
+
+    
+}
+
+.content-const{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.construcao img{
+    width:100%;
+    margin-top: 10px;
+    margin: 0;
+    padding: 0;
+    box-shadow: 1px 1px 10px white;
+    margin-top: 30px;
+    border-radius: 12px;
+
+}
+
+.content-const span{
+    color: gold;
+    font-size: 32px;
+
+}
+
+@media(max-width: 1125px){
+
+    .construcao span{
+
+        font-size: 20px;
+
+    }
+
+
+}
+
+@media(max-width: 715px){
+
+    .construcao span{
+        font-size: 18px;
+    }
+
+}
+
+
+@media(max-width: 660px){
+
+    .logo{
+
+            
+    }
+
+    body{
+        height: 200vh;
+
+    }
+
+    .pagina-extra{
+        
+        float: left;
+            
+            width: 400px;
+           
+        justify-content: space-around;
+        margin-bottom: 40px;
+       
+    
+    }
+    
+    ul{
+        display: flex;
+        justify-content: space-between;
+    
+    }
+    
+    li{
+        list-style-type: none;
+        float: left;
+       
+    }
+    
+    .pagina-extra a{
+      
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: none;
+        font-size: 26px;
+        text-shadow:1px 1px 30px #fff;
+        
+    }
+
+    .construcao span{
+        font-size: 16px;
+
+    }
+
+
+ }
+
+ @media(max-width: 575px){
+    .construcao span{
+        font-size: 12px;
+    }
+
+ }
+
+ @media(max-width: 500px){
+
+
+    .logo img{
+
+        width: 300px;
+
+    }
+
+ }
