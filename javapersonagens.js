@@ -169,33 +169,6 @@ function hideModal() {
 }
 
 
-function convertEyeColor(eyeColor){
-
-
-        const cores = {
-
-
-            blue: "azul",
-            brown: "Castanho",
-            green: "verde",
-            yellow: "amarelo",
-            black: "preto",
-            pink: "rosa",
-            red: "vermelho",
-            orange: "laranja",
-            hazel: "avelã",
-            unknown: "desconhecida",
-             gray: "cinza"
-
-
-
-
-        };
-
-
-        return cores[eyeColor.toLowerCase()] || eyeColor
-
-}
 
 
 
@@ -208,3 +181,4 @@ function converName(name){
         return `${name}`
 
 }
+
