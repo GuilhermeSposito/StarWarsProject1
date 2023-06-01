@@ -35,7 +35,7 @@ async function loadCharacters(url){
                 card.className = "cards"
 
                 const characterNameBG = document.createElement("div")
-                characterNameBG.className = "planet-name"
+                characterNameBG.className = "character-name-bg"
 
                 const characterName = document.createElement("span")
                 characterName.className = "character-name"
