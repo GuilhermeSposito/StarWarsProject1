@@ -39,7 +39,7 @@ async function loadPlanets(url){
 
                 const planetName = document.createElement("span")
                 planetName.className = "planets-name"
-                planetName.innerText = `${planet.name}`
+                planetName.innerText = `${converName(planet.name)}`
 
 
                 planetNameBG.appendChild(planetName)
@@ -66,7 +66,7 @@ async function loadPlanets(url){
 
                     const planetName = document.createElement("span")
                     planetName.className = "planet-details"
-                    planetName.innerText = ` Nome: ${planet.name}`
+                    planetName.innerText = ` Nome: ${converName(planet.name)}`
 
                     const rotacaoPlanet = document.createElement("span")
                     rotacaoPlanet.className = "planet-details"
@@ -197,33 +197,14 @@ function convertEyeColor(eyeColor){
 
 }
 
-function convertHeight(height) {
-
-    if ( height === "unknown"){
-        return "Desconhecido"
-    }
-
-    return (height / 100).toFixed(2);
 
 
-}
+function converName(name){
 
-function convertMass(mass){
 
-    if(mass === "unknown"){
-    return "Desconhecido"}
+    if(name === "unknown"){
+        return "desconhecido"}
 
-        return `${mass}`
+        return `${name}`
 
 }
-
-function convertBirthYear (birthYear){
-
-    if(birthYear === "unknown"){
-        return "Desconhecido"
-    }
-
-    return `${birthYear}` 
-
-}
-
